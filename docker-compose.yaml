@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # Database Tier: MongoDB with Volume Persistence and Health Check
+  mongodb:
+    image: mongo:7.0-jammy
+    container_name: kubepulse-mongodb
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+      MONGO_INITDB_DATABASE: kubepulse
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - kubepulse-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # Backend Tier: Node.js 20 REST API Service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: kubepulse-backend
+    restart: always
+    environment:
+      PORT: 8080
+      NODE_ENV: production
+      MONGO_CONN_STR: mongodb://admin:password123@mongodb:27017/kubepulse?authSource=admin
+    ports:
+      - "8080:8080"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - kubepulse-network
+
+  # Frontend Tier: React SPA served by Nginx Alpine
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: kubepulse-frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - kubepulse-network
+
+networks:
+  kubepulse-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
+    driver: local
