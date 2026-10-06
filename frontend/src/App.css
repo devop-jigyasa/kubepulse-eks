@@ -1,3 +1,18 @@
+/* KubePulse CloudOps Modern Theme */
+:root {
+  --bg-primary: #0a0f1d;
+  --bg-surface: #111827;
+  --bg-surface-alt: #1f2937;
+  --border-color: #374151;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-rose: #f43f5e;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,72 +21,363 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #0a0f1d;
-  color: #f1f5f9;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
   min-height: 100vh;
 }
 
-.app-container {
-  max-width: 900px;
+.kubepulse-layout {
+  max-width: 1050px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.5rem;
 }
 
-.header {
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
   margin-bottom: 2rem;
-  border-bottom: 1px solid #1e293b;
-  padding-bottom: 1rem;
 }
 
-.header h1 {
-  font-size: 1.8rem;
-  color: #38bdf8;
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.header p {
-  color: #94a3b8;
-  font-size: 0.95rem;
+.logo-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.3);
 }
 
-.task-form {
+.navbar h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.badge-cloud {
+  font-size: 0.75rem;
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  padding: 0.15rem 0.6rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.health-badges {
   display: flex;
   gap: 0.75rem;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  text-transform: capitalize;
+}
+
+.status-pill .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-pill.healthy .dot {
+  background-color: var(--accent-emerald);
+  box-shadow: 0 0 8px var(--accent-emerald);
+}
+
+.status-pill.warning .dot {
+  background-color: var(--accent-amber);
+  box-shadow: 0 0 8px var(--accent-amber);
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
   margin-bottom: 2rem;
 }
 
-.task-form input {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  border-radius: 8px;
-  border: 1px solid #334155;
-  background: #1e293b;
-  color: #fff;
-  font-size: 0.95rem;
+.metric-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.task-form button {
-  padding: 0.75rem 1.5rem;
+.metric-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.metric-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.text-amber { color: var(--accent-amber); }
+.text-emerald { color: var(--accent-emerald); }
+.text-blue { color: var(--accent-cyan); }
+
+/* Main Card */
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #fff;
+}
+
+/* Form */
+.create-task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.create-task-form input[type="text"] {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
   border-radius: 8px;
-  background: #0284c7;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.create-task-form input[type="text"]:focus {
+  border-color: var(--accent-blue);
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.select-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+  min-width: 150px;
+}
+
+.select-group label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.select-group select {
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  color: #fff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #2563eb, #0284c7);
   color: #fff;
   font-weight: 600;
   border: none;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.task-form button:hover {
-  background: #0369a1;
-}
-
-.task-list {
-  list-style: none;
-}
-
-.task-item {
-  background: #1e293b;
-  padding: 1rem;
   border-radius: 8px;
-  margin-bottom: 0.75rem;
-  border: 1px solid #334155;
+  cursor: pointer;
+  height: 42px;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Operations Queue */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.btn-refresh {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn-refresh:hover {
+  color: #fff;
+  border-color: var(--text-muted);
+}
+
+.task-queue {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  transition: all 0.2s;
+}
+
+.task-row:hover {
+  border-color: #4b5563;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--accent-emerald);
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.task-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #f3f4f6;
+}
+
+.task-completed .task-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+}
+
+.tag-category {
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  background: #374151;
+  color: #d1d5db;
+}
+
+.tag-infrastructure { background: #1e3a8a; color: #93c5fd; }
+.tag-cicdpipeline { background: #581c87; color: #d8b4fe; }
+.tag-kubernetes { background: #064e3b; color: #6ee7b7; }
+.tag-security { background: #881337; color: #fda4af; }
+.tag-monitoring { background: #78350f; color: #fde68a; }
+
+.tag-priority {
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.priority-critical { background: rgba(244, 63, 94, 0.2); color: #f43f5e; }
+.priority-high { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+.priority-medium { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+.priority-low { background: rgba(107, 114, 128, 0.2); color: #9ca3af; }
+
+.task-timestamp {
+  color: var(--text-muted);
+}
+
+.btn-delete {
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.4rem;
+  border-radius: 4px;
+  transition: color 0.2s;
+}
+
+.btn-delete:hover {
+  color: var(--accent-rose);
+}
+
+.empty-state, .loading-state {
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.footer {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 3rem;
 }
