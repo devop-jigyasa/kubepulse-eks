@@ -1,0 +1,35 @@
+{{- if .Values.ingress.enabled -}}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "kubepulse.fullname" . }}-ingress
+  labels:
+    {{- include "kubepulse.labels" . | nindent 4 }}
+  annotations:
+    {{- toYaml .Values.ingress.annotations | nindent 4 }}
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "kubepulse.fullname" . }}-backend
+                port:
+                  number: {{ .Values.backend.port }}
+          - path: /healthz
+            pathType: Exact
+            backend:
+              service:
+                name: {{ include "kubepulse.fullname" . }}-backend
+                port:
+                  number: {{ .Values.backend.port }}
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "kubepulse.fullname" . }}-frontend
+                port:
+                  number: {{ .Values.frontend.port }}
+{{- end }}

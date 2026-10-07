@@ -1,0 +1,52 @@
+# Default values for kubepulse chart
+global:
+  environment: production
+  namespace: kubepulse
+
+backend:
+  replicaCount: 2
+  image:
+    repository: kubepulse-backend
+    pullPolicy: IfNotPresent
+    tag: "v1.0.0"
+  port: 8080
+  resources:
+    limits:
+      cpu: 300m
+      memory: 256Mi
+    requests:
+      cpu: 100m
+      memory: 128Mi
+  env:
+    nodeEnv: "production"
+
+frontend:
+  replicaCount: 2
+  image:
+    repository: kubepulse-frontend
+    pullPolicy: IfNotPresent
+    tag: "v1.0.0"
+  port: 80
+  resources:
+    limits:
+      cpu: 200m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
+
+mongodb:
+  enabled: true
+  persistence:
+    size: 10Gi
+    storageClass: "gp3"
+
+ingress:
+  enabled: true
+  className: "alb"
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+    alb.ingress.kubernetes.io/healthcheck-path: /healthz

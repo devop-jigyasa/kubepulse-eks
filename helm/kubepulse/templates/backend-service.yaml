@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "kubepulse.fullname" . }}-backend
+  labels:
+    {{- include "kubepulse.labels" . | nindent 4 }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{ .Values.backend.port }}
+      targetPort: {{ .Values.backend.port }}
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "kubepulse.name" . }}-backend

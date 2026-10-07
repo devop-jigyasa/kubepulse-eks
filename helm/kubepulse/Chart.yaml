@@ -1,0 +1,17 @@
+apiVersion: v2
+name: kubepulse
+description: Enterprise Helm chart for KubePulse CloudOps 3-Tier Distributed Architecture
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+keywords:
+  - kubepulse
+  - devops
+  - eks
+  - 3-tier
+  - react
+  - nodejs
+  - mongodb
+maintainers:
+  - name: Jigyasa
+    email: jigyasa8969@gmail.com

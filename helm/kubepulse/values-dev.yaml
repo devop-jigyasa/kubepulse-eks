@@ -1,0 +1,29 @@
+# Development Environment Overrides
+global:
+  environment: development
+
+backend:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 150m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
+  env:
+    nodeEnv: "development"
+
+frontend:
+  replicaCount: 1
+  resources:
+    limits:
+      cpu: 100m
+      memory: 64Mi
+    requests:
+      cpu: 25m
+      memory: 32Mi
+
+mongodb:
+  persistence:
+    size: 2Gi
