@@ -1,0 +1,26 @@
+[
+  {
+    "task": "Provision EKS v1.30 Control Plane in us-west-2",
+    "category": "Infrastructure",
+    "priority": "Critical",
+    "completed": true
+  },
+  {
+    "task": "Configure AWS Load Balancer Controller with IRSA",
+    "category": "Kubernetes",
+    "priority": "High",
+    "completed": true
+  },
+  {
+    "task": "Set up Trivy container security scanning in CI workflow",
+    "category": "Security",
+    "priority": "High",
+    "completed": false
+  },
+  {
+    "task": "Deploy Prometheus node exporter and Grafana monitoring stack",
+    "category": "Monitoring",
+    "priority": "Medium",
+    "completed": false
+  }
+]
