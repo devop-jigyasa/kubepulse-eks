@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: kubepulse-backend-monitor
+  namespace: kubepulse
+  labels:
+    release: prometheus-stack
+    app.kubernetes.io/name: kubepulse-backend
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: backend
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 15s
+      scrapeTimeout: 10s

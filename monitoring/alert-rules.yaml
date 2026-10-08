@@ -1,0 +1,41 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: kubepulse-alerts
+  namespace: kubepulse
+  labels:
+    role: alert-rules
+    release: prometheus-stack
+spec:
+  groups:
+    - name: kubepulse-production-alerts
+      rules:
+        - alert: HighHttpErrorRate
+          expr: rate(kubepulse_http_errors_total[5m]) > 0.05
+          for: 2m
+          labels:
+            severity: critical
+            tier: api
+          annotations:
+            summary: "High HTTP error rate detected in KubePulse API"
+            description: "KubePulse API error rate has exceeded 5% over the past 5 minutes on pod {{ $labels.pod }}."
+
+        - alert: DatabaseDisconnected
+          expr: kubepulse_database_status == 0
+          for: 1m
+          labels:
+            severity: critical
+            tier: database
+          annotations:
+            summary: "MongoDB Connection Lost"
+            description: "KubePulse backend pod {{ $labels.pod }} cannot reach MongoDB cluster."
+
+        - alert: HighPodMemoryUsage
+          expr: kubepulse_memory_rss_bytes > 200000000 # 200MB
+          for: 5m
+          labels:
+            severity: warning
+            tier: api
+          annotations:
+            summary: "KubePulse Backend high memory usage"
+            description: "Pod memory RSS exceeds 200MB threshold."
