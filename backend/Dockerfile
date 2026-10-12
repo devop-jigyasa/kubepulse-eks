@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 # Clean production install with layer caching
-RUN npm ci --only=production && npm cache clean --force
+RUN npm install --only=production && npm cache clean --force
 
 # Stage 2: Final Minimal Runtime
 FROM node:20-alpine AS runtime
