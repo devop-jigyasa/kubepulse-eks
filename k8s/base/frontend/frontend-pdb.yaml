@@ -1,0 +1,16 @@
+# ============================================================
+# KubePulse Frontend Pod Disruption Budget (PDB)
+# Guarantees zero-downtime during cluster upgrades & node drains
+# ============================================================
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: frontend-pdb
+  namespace: kubepulse
+  labels:
+    app.kubernetes.io/name: frontend
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: frontend

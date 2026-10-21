@@ -1,0 +1,10 @@
+# ============================================================
+# KubePulse Infrastructure as Code: Sample Configuration
+# Copy this file to terraform.tfvars for custom deployment parameters
+# ============================================================
+
+aws_region      = "us-west-2"
+environment     = "production"
+project_name    = "kubepulse"
+vpc_cidr        = "10.0.0.0/16"
+cluster_version = "1.30"

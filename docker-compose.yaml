@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # Database Tier: MongoDB with Volume Persistence and Health Check
   mongodb:
@@ -35,7 +33,7 @@ services:
       NODE_ENV: production
       MONGO_CONN_STR: mongodb://admin:password123@mongodb:27017/kubepulse?authSource=admin
     ports:
-      - "8080:8080"
+      - "5050:8080"
     depends_on:
       mongodb:
         condition: service_healthy
