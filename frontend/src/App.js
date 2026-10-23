@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./App.css";
 
-const API_BASE = process.env.REACT_APP_API_URL || "/api/tasks";
+const API_HOST = (process.env.REACT_APP_API_HOST || "").replace(/\/$/, "");
+const API_BASE = `${API_HOST}/api/tasks`;
 
 // Pre-packaged enterprise cloud scenarios for instant seeding
 const PRESET_SCENARIOS = {
@@ -64,7 +65,7 @@ function App() {
   const checkHealth = async () => {
     const t0 = performance.now();
     try {
-      const res = await axios.get("/readyz");
+      const res = await axios.get(`${API_HOST}/readyz`);
       const duration = Math.round(performance.now() - t0);
       if (res.status === 200) {
         setSystemStatus({ api: "healthy", db: "connected", latency: duration || 16 });
@@ -149,8 +150,8 @@ function App() {
     const requests = [];
     for (let i = 0; i < 12; i++) {
       requests.push(
-        axios.get("/readyz").catch((e) => e),
-        axios.get("/api/tasks").catch((e) => e)
+        axios.get(`${API_HOST}/readyz`).catch((e) => e),
+        axios.get(API_BASE).catch((e) => e)
       );
     }
 
