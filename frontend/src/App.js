@@ -202,21 +202,21 @@ function App() {
 
         <div className="telemetry-badges">
           <div className="telemetry-pill">
-            <span className="pulse-dot green" />
+            <span className="pulse-dot sage" />
             <span className="pill-label">API ENGINE</span>
             <span className="pill-value">{systemStatus.api}</span>
             <span className="pill-meta">{systemStatus.latency}ms</span>
           </div>
 
           <div className="telemetry-pill">
-            <span className="pulse-dot green" />
+            <span className="pulse-dot sage" />
             <span className="pill-label">MONGODB</span>
             <span className="pill-value">{systemStatus.db}</span>
             <span className="pill-meta">gp3 PVC</span>
           </div>
 
           <div className="telemetry-pill highlight">
-            <span className="pulse-dot violet" />
+            <span className="pulse-dot ocean" />
             <span className="pill-label">REGION</span>
             <span className="pill-value">us-west-2</span>
             <span className="pill-meta">Multi-AZ</span>
@@ -240,7 +240,7 @@ function App() {
             onClick={() => setActiveTab("topology")}
           >
             <span className="tab-icon">☸️</span> Cluster Topology
-            <span className="tab-indicator green">4 Pods Ready</span>
+            <span className="tab-indicator sage">4 Pods Ready</span>
           </button>
 
           <button
@@ -248,7 +248,7 @@ function App() {
             onClick={() => setActiveTab("telemetry")}
           >
             <span className="tab-icon">⚡</span> Telemetry & Chaos
-            <span className="tab-indicator amber">Live</span>
+            <span className="tab-indicator ocean">Live</span>
           </button>
 
           <button
@@ -256,7 +256,7 @@ function App() {
             onClick={() => setActiveTab("finops")}
           >
             <span className="tab-icon">💎</span> FinOps ROI
-            <span className="tab-indicator gold">Save 70%</span>
+            <span className="tab-indicator sand">Save 70%</span>
           </button>
         </div>
 
@@ -287,10 +287,10 @@ function App() {
         <div className="kpi-card">
           <div className="kpi-header">
             <span className="kpi-title">IN-FLIGHT TASKS</span>
-            <span className="kpi-chip amber">Requires Action</span>
+            <span className="kpi-chip plum">Requires Action</span>
           </div>
           <div className="kpi-body">
-            <span className="kpi-stat text-amber">{pendingCount}</span>
+            <span className="kpi-stat text-plum">{pendingCount}</span>
             <span className="kpi-meta">
               {criticalCount > 0 ? `⚠️ ${criticalCount} Critical` : "No P1 blockers"}
             </span>
@@ -300,10 +300,10 @@ function App() {
         <div className="kpi-card">
           <div className="kpi-header">
             <span className="kpi-title">COMPLETED DELIVERIES</span>
-            <span className="kpi-chip green">Verified</span>
+            <span className="kpi-chip sage">Verified</span>
           </div>
           <div className="kpi-body">
-            <span className="kpi-stat text-mint">{completedCount}</span>
+            <span className="kpi-stat text-sage">{completedCount}</span>
             <span className="kpi-meta">100% Zero-Downtime</span>
           </div>
         </div>
@@ -311,10 +311,10 @@ function App() {
         <div className="kpi-card">
           <div className="kpi-header">
             <span className="kpi-title">COMPUTE ALLOCATION</span>
-            <span className="kpi-chip violet">Spot + On-Demand</span>
+            <span className="kpi-chip ocean">Spot + On-Demand</span>
           </div>
           <div className="kpi-body">
-            <span className="kpi-stat text-violet">{nodesCount} Nodes</span>
+            <span className="kpi-stat text-ocean">{nodesCount} Nodes</span>
             <span className="kpi-meta">EKS v1.30 Managed</span>
           </div>
         </div>
@@ -327,19 +327,19 @@ function App() {
           <div className="scenario-strip">
             <span className="scenario-label">⚡ One-Click Scenarios:</span>
             <button
-              className="scenario-pill copper"
+              className="scenario-pill plum"
               onClick={() => handleSeedScenario("incident")}
             >
               🛡️ P1 Incident Response
             </button>
             <button
-              className="scenario-pill violet"
+              className="scenario-pill ocean"
               onClick={() => handleSeedScenario("upgrade")}
             >
               🚀 EKS 1.30 Rollout
             </button>
             <button
-              className="scenario-pill gold"
+              className="scenario-pill sand"
               onClick={() => handleSeedScenario("finops")}
             >
               💰 Spot FinOps Audit
@@ -520,7 +520,7 @@ function App() {
                 <p>Click any node or pod to inspect live container specifications & HPA telemetry.</p>
               </div>
               <div className="mesh-status-indicator">
-                <span className="pulse-dot green" />
+                <span className="pulse-dot sage" />
                 <span>Zero-Trust NetworkPolicies Enforced</span>
               </div>
             </div>
@@ -806,13 +806,13 @@ function App() {
 
                 <div className="cost-box hybrid-spot">
                   <span className="cost-label">KUBEPULSE HYBRID SPOT</span>
-                  <span className="cost-figure text-mint">${monthlySpot}</span>
+                  <span className="cost-figure text-sage">${monthlySpot}</span>
                   <span className="cost-sub">Per Month with Spot Diversification</span>
                 </div>
 
                 <div className="cost-box verified-savings">
                   <span className="cost-label">VERIFIED COST REDUCTION</span>
-                  <span className="cost-figure text-gold">${estimatedSavings}</span>
+                  <span className="cost-figure text-ocean">${estimatedSavings}</span>
                   <span className="cost-sub">{Math.round((estimatedSavings / monthlyOnDemand) * 100)}% Monthly Capital Saved</span>
                 </div>
               </div>
