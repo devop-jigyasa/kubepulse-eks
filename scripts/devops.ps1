@@ -53,12 +53,23 @@ switch ($Command) {
         docker compose logs -f
     }
     "simulate" {
-        node "$PSScriptRoot\simulate-traffic.js"
+        if (Get-Command node -ErrorAction SilentlyContinue) {
+            node "$PSScriptRoot\simulate-traffic.js"
+        } else {
+            Write-Host "Local Node.js not detected on host. Executing traffic simulation inside kubepulse-backend container..." -ForegroundColor Magenta
+            docker cp "$PSScriptRoot\simulate-traffic.js" kubepulse-backend:/usr/src/app/simulate-traffic.js
+            docker compose exec -e API_URL=http://localhost:8080 backend node simulate-traffic.js
+        }
     }
     "test" {
-        Push-Location "$PSScriptRoot\..\backend"
-        npm test
-        Pop-Location
+        if (Get-Command npm -ErrorAction SilentlyContinue) {
+            Push-Location "$PSScriptRoot\..\backend"
+            npm test
+            Pop-Location
+        } else {
+            Write-Host "Local npm not detected on host. Executing backend tests inside kubepulse-backend container..." -ForegroundColor Green
+            docker compose exec backend npm test
+        }
     }
     "clean" {
         Write-Host "`nCleaning KubePulse containers and volumes..." -ForegroundColor Red

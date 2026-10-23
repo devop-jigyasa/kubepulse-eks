@@ -10,11 +10,13 @@ $retryCount = 0
 $maxRetries = 15
 $ready = $false
 
+$backendPort = 5050
+
 while (-not $ready -and $retryCount -lt $maxRetries) {
     Start-Sleep -Seconds 2
     $retryCount++
     try {
-        $response = Invoke-RestMethod -Uri "http://localhost:8080/readyz" -Method Get -ErrorAction SilentlyContinue
+        $response = Invoke-RestMethod -Uri "http://localhost:$backendPort/readyz" -Method Get -ErrorAction SilentlyContinue
         if ($response.status -eq "ready") {
             $ready = $true
         }
@@ -38,12 +40,12 @@ $body = @{
     priority = "High"
 } | ConvertTo-Json
 
-$postResponse = Invoke-RestMethod -Uri "http://localhost:8080/api/tasks" -Method Post -Body $body -ContentType "application/json"
+$postResponse = Invoke-RestMethod -Uri "http://localhost:$backendPort/api/tasks" -Method Post -Body $body -ContentType "application/json"
 Write-Host "   Created task: $($postResponse.task)" -ForegroundColor Green
 
-$tasks = Invoke-RestMethod -Uri "http://localhost:8080/api/tasks" -Method Get
+$tasks = Invoke-RestMethod -Uri "http://localhost:$backendPort/api/tasks" -Method Get
 Write-Host "   Active tasks count: $($tasks.Count)" -ForegroundColor Green
 
 Write-Host "`n🎉 Local verification completed successfully!" -ForegroundColor Green
 Write-Host "👉 Frontend: http://localhost:3000"
-Write-Host "👉 Backend API: http://localhost:8080"
+Write-Host "👉 Backend API: http://localhost:$backendPort"
