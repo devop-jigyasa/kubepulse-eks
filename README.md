@@ -1,6 +1,9 @@
 # KubePulse CloudOps: Production 3-Tier Microservices on Amazon EKS
 
-[![DevSecOps Pipeline](https://github.com/devop-jigyasa/kubepulse-eks/actions/workflows/devsecops-pipeline.yml/badge.svg)](https://github.com/devop-jigyasa/kubepulse-eks/actions)
+[![Live Interactive Demo](https://img.shields.io/badge/Live%20Demo-kubepulse--eks.vercel.app-566D53?style=for-the-badge&logo=vercel&logoColor=white)](https://kubepulse-eks.vercel.app)
+[![Backend API Status](https://img.shields.io/badge/API%20Engine-Render%20Online-346170?style=for-the-badge&logo=render&logoColor=white)](https://kubepulse-backend.onrender.com/readyz)
+[![DevSecOps Pipeline](https://img.shields.io/badge/DevSecOps-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/devop-jigyasa/kubepulse-eks/actions)
+
 [![Kubernetes](https://img.shields.io/badge/Kubernetes-v1.30-326CE5?logo=kubernetes&logoColor=white)](https://kubernetes.io/)
 [![Terraform](https://img.shields.io/badge/Terraform-v1.8+-7B42BC?logo=terraform&logoColor=white)](https://www.terraform.io/)
 [![AWS](https://img.shields.io/badge/AWS-EKS%20%7C%20ALB%20%7C%20ECR%20%7C%20EBS-232F3E?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
@@ -9,6 +12,9 @@
 [![Docker](https://img.shields.io/badge/Docker-Multi--Stage-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![Security](https://img.shields.io/badge/Security-Trivy%20SAST-002B49)](https://trivy.dev/)
 [![Observability](https://img.shields.io/badge/Observability-Prometheus%20%26%20Grafana-E6522C?logo=prometheus&logoColor=white)](https://prometheus.io/)
+
+> 🚀 **Live Public CloudOps Dashboard**: **[https://kubepulse-eks.vercel.app](https://kubepulse-eks.vercel.app)**  
+> ⚡ **Live Backend API Readiness**: **[https://kubepulse-backend.onrender.com/readyz](https://kubepulse-backend.onrender.com/readyz)**
 
 KubePulse is an enterprise-grade, highly available 3-tier cloud operations platform built with **React**, **Node.js 20 LTS (Express)**, and **MongoDB**, deployed onto **Amazon Elastic Kubernetes Service (Amazon EKS)** using modern **Infrastructure as Code (Terraform)**, packaged with **Helm**, orchestrated with **ArgoCD GitOps**, and secured through an automated **GitHub Actions DevSecOps** pipeline.
 
