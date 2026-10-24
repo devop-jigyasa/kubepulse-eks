@@ -70,6 +70,13 @@ In conventional distributed environments, deploying microservices often introduc
 
 ### 1. Enterprise 3-Tier EKS Microservices Mesh
 
+<p align="center">
+  <img src="docs/images/architecture.svg" alt="KubePulse CloudOps System Architecture Blueprint" width="100%"/>
+</p>
+
+<details>
+<summary><b>🔍 Click to inspect interactive Mermaid Architecture Source Code</b></summary>
+
 ```mermaid
 flowchart TD
     subgraph Edge ["🌐 Edge Routing & Ingress Layer"]
@@ -124,6 +131,7 @@ flowchart TD
     class DbSvc,DbPod,PVC,CSI,KMS db;
     class Prometheus,AlertMgr,Grafana obs;
 ```
+</details>
 
 ---
 
