@@ -71,7 +71,11 @@ In conventional distributed environments, deploying microservices often introduc
 ### 1. Enterprise 3-Tier EKS Microservices Mesh
 
 <p align="center">
-  <img src="docs/images/architecture.svg" alt="KubePulse CloudOps System Architecture Blueprint" width="100%"/>
+  <a href="docs/images/architecture.png" target="_blank">
+    <img src="docs/images/architecture.png" alt="KubePulse CloudOps System Architecture Blueprint" width="100%"/>
+  </a>
+  <br/>
+  <sub>🔍 <em>Click image to open high-resolution 2560x1840 Ultra-HD architecture diagram | Vector source: <a href="docs/images/architecture.svg">architecture.svg</a></em></sub>
 </p>
 
 <details>
