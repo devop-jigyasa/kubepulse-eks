@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 920" width="100%" height="100%" style="background:#080C14; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1180" width="100%" height="100%" style="background:#080C14; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgCanvas" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#080C14"/>
-      <stop offset="50%" stop-color="#0D1424"/>
+      <stop offset="50%" stop-color="#0E1626"/>
       <stop offset="100%" stop-color="#060910"/>
     </linearGradient>
 
@@ -14,28 +14,28 @@
     </linearGradient>
 
     <linearGradient id="feGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#182A20"/>
-      <stop offset="100%" stop-color="#101D16"/>
+      <stop offset="0%" stop-color="#16281E"/>
+      <stop offset="100%" stop-color="#0F1B14"/>
     </linearGradient>
 
     <linearGradient id="beGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#152736"/>
-      <stop offset="100%" stop-color="#0E1B26"/>
+      <stop offset="0%" stop-color="#142636"/>
+      <stop offset="100%" stop-color="#0D1A25"/>
     </linearGradient>
 
     <linearGradient id="dbGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#282015"/>
-      <stop offset="100%" stop-color="#1A140B"/>
+      <stop offset="0%" stop-color="#261E14"/>
+      <stop offset="100%" stop-color="#18130B"/>
     </linearGradient>
 
     <linearGradient id="gitopsGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1E1728"/>
-      <stop offset="100%" stop-color="#121D2C"/>
+      <stop offset="0%" stop-color="#1C1526"/>
+      <stop offset="100%" stop-color="#111B2A"/>
     </linearGradient>
 
     <linearGradient id="finopsGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#142622"/>
-      <stop offset="100%" stop-color="#10202A"/>
+      <stop offset="0%" stop-color="#132420"/>
+      <stop offset="100%" stop-color="#0F1E28"/>
     </linearGradient>
 
     <!-- Drop Shadows -->
@@ -56,342 +56,343 @@
   </defs>
 
   <!-- Background Base Canvas -->
-  <rect width="1280" height="920" fill="url(#bgCanvas)"/>
+  <rect width="1000" height="1180" fill="url(#bgCanvas)"/>
 
   <!-- ======================================================== -->
   <!-- 1. TOP HEADER BANNER (BOLD & HIGH IMPACT)                 -->
   <!-- ======================================================== -->
-  <rect x="30" y="20" width="1220" height="76" rx="12" fill="url(#panelGrad)" stroke="#1E2B42" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="20" y="18" width="960" height="74" rx="12" fill="url(#panelGrad)" stroke="#1E2B42" stroke-width="2" filter="url(#shadow)"/>
   
-  <rect x="48" y="34" width="48" height="48" rx="10" fill="#172438" stroke="#38BDF8" stroke-width="1.8"/>
-  <text x="60" y="69" font-size="28">☸</text>
+  <rect x="36" y="32" width="46" height="46" rx="10" fill="#172438" stroke="#38BDF8" stroke-width="1.8"/>
+  <text x="47" y="66" font-size="28">☸</text>
 
-  <text x="110" y="52" font-size="24" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">KubePulse CloudOps Platform</text>
-  <text x="110" y="73" font-size="14" font-weight="600" fill="#94A3B8">Production 3-Tier Microservices Architecture • Amazon EKS v1.30 • ArgoCD GitOps • AWS FinOps Governance</text>
+  <text x="96" y="49" font-size="23" font-weight="800" fill="#FFFFFF" letter-spacing="-0.02em">KubePulse CloudOps Platform</text>
+  <text x="96" y="70" font-size="13" font-weight="600" fill="#94A3B8">Production 3-Tier Microservices • Amazon EKS v1.30 • ArgoCD GitOps • AWS FinOps</text>
 
   <!-- Status Badges on Top Right -->
-  <rect x="910" y="38" width="145" height="38" rx="19" fill="#0E2D1E" stroke="#22C55E" stroke-width="1.5"/>
-  <circle cx="928" cy="57" r="5" fill="#22C55E"/>
-  <text x="942" y="62" font-size="13" font-weight="800" fill="#4ADE80" font-family="monospace">LIVE DEMO 24/7</text>
+  <rect x="670" y="36" width="140" height="36" rx="18" fill="#0E2D1E" stroke="#22C55E" stroke-width="1.5"/>
+  <circle cx="688" cy="54" r="5" fill="#22C55E"/>
+  <text x="702" y="59" font-size="12" font-weight="800" fill="#4ADE80" font-family="monospace">LIVE DEMO 24/7</text>
 
-  <rect x="1070" y="38" width="165" height="38" rx="19" fill="#13263E" stroke="#38BDF8" stroke-width="1.5"/>
-  <text x="1086" y="62" font-size="13" font-weight="800" fill="#38BDF8" font-family="monospace">AMAZON EKS v1.30</text>
+  <rect x="820" y="36" width="146" height="36" rx="18" fill="#13263E" stroke="#38BDF8" stroke-width="1.5"/>
+  <text x="834" y="59" font-size="12" font-weight="800" fill="#38BDF8" font-family="monospace">AMAZON EKS v1.30</text>
 
 
   <!-- ======================================================== -->
-  <!-- 2. MAIN SECTION: INGRESS & 3-TIER AMAZON EKS CLUSTER      -->
+  <!-- 2. LAYER 1: EDGE & TRAFFIC INGRESS LAYER (FULL WIDTH)    -->
   <!-- ======================================================== -->
-
-  <!-- LEFT: EDGE & TRAFFIC INGRESS -->
-  <g transform="translate(30, 115)">
-    <rect width="225" height="430" rx="12" fill="url(#panelGrad)" stroke="#223550" stroke-width="2" filter="url(#shadow)"/>
+  <g transform="translate(20, 104)">
+    <rect width="960" height="116" rx="12" fill="url(#panelGrad)" stroke="#223550" stroke-width="2" filter="url(#shadow)"/>
     
-    <rect x="14" y="14" width="197" height="32" rx="6" fill="#162338"/>
-    <text x="25" y="36" font-size="14" font-weight="800" fill="#38BDF8" letter-spacing="0.05em">EDGE INGRESS</text>
+    <text x="18" y="24" font-size="13" font-weight="800" fill="#38BDF8" letter-spacing="0.05em">🌐 1. EDGE ROUTING &amp; TRAFFIC INGRESS LAYER</text>
 
     <!-- Public Traffic Card -->
-    <rect x="14" y="60" width="197" height="85" rx="8" fill="#0C1322" stroke="#334155" stroke-width="1.5"/>
-    <text x="26" y="94" font-size="22">🌐</text>
-    <text x="58" y="90" font-size="15" font-weight="800" fill="#FFFFFF">Public Clients</text>
-    <text x="58" y="110" font-size="13" font-weight="600" fill="#94A3B8">Browser SPA • SRE</text>
-    <text x="58" y="128" font-size="12" font-weight="700" fill="#22C55E" font-family="monospace">HTTPS / TLS 1.3</text>
+    <rect x="18" y="34" width="265" height="70" rx="8" fill="#0C1322" stroke="#334155" stroke-width="1.5"/>
+    <text x="30" y="65" font-size="24">🌐</text>
+    <text x="65" y="58" font-size="16" font-weight="800" fill="#FFFFFF">Public Clients</text>
+    <text x="65" y="76" font-size="13" font-weight="600" fill="#94A3B8">Browser SPA • CloudOps SRE</text>
+    <text x="65" y="94" font-size="12" font-weight="700" fill="#22C55E" font-family="monospace">HTTPS / TLS 1.3 (Port 443)</text>
 
-    <!-- Arrow down -->
-    <line x1="112" y1="145" x2="112" y2="175" stroke="#38BDF8" stroke-width="2.5" stroke-dasharray="4,4" marker-end="url(#arrowBlue)"/>
+    <!-- Arrow 1 ──► -->
+    <line x1="293" y1="69" x2="328" y2="69" stroke="#38BDF8" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
 
     <!-- AWS Route 53 Card -->
-    <rect x="14" y="175" width="197" height="85" rx="8" fill="#0C1322" stroke="#334155" stroke-width="1.5"/>
-    <text x="26" y="210" font-size="22">⚡</text>
-    <text x="58" y="206" font-size="15" font-weight="800" fill="#FFFFFF">AWS Route 53</text>
-    <text x="58" y="226" font-size="13" font-weight="600" fill="#94A3B8">Global DNS Routing</text>
-    <text x="58" y="244" font-size="12" font-weight="700" fill="#38BDF8" font-family="monospace">kubepulse-eks.vercel.app</text>
+    <rect x="338" y="34" width="270" height="70" rx="8" fill="#0C1322" stroke="#334155" stroke-width="1.5"/>
+    <text x="350" y="65" font-size="24">⚡</text>
+    <text x="385" y="58" font-size="16" font-weight="800" fill="#FFFFFF">AWS Route 53</text>
+    <text x="385" y="76" font-size="13" font-weight="600" fill="#94A3B8">Global Latency DNS Routing</text>
+    <text x="385" y="94" font-size="12" font-weight="700" fill="#38BDF8" font-family="monospace">kubepulse-eks.vercel.app</text>
 
-    <!-- Arrow down -->
-    <line x1="112" y1="260" x2="112" y2="290" stroke="#F59E0B" stroke-width="2.5" marker-end="url(#arrowAmber)"/>
+    <!-- Arrow 2 ──► -->
+    <line x1="618" y1="69" x2="653" y2="69" stroke="#F59E0B" stroke-width="2.5" marker-end="url(#arrowAmber)"/>
 
-    <!-- AWS ALB Card -->
-    <rect x="14" y="290" width="197" height="122" rx="8" fill="#1C180C" stroke="#F59E0B" stroke-width="1.8"/>
-    <text x="26" y="325" font-size="22">⚖️</text>
-    <text x="58" y="322" font-size="15" font-weight="800" fill="#FBBF24">AWS ALB Ingress</text>
-    <text x="24" y="348" font-size="13" font-weight="600" fill="#CBD5E1">Application Load Balancer</text>
-    <text x="24" y="370" font-size="12" font-weight="700" fill="#94A3B8">Path: <tspan fill="#4ADE80">/* ➔ FE</tspan> | <tspan fill="#38BDF8">/api/* ➔ API</tspan></text>
-    <text x="24" y="392" font-size="12" font-weight="700" fill="#F59E0B" font-family="monospace">Controller v2.7 (IAM IRSA)</text>
+    <!-- AWS ALB Ingress Card -->
+    <rect x="663" y="34" width="279" height="70" rx="8" fill="#1C180C" stroke="#F59E0B" stroke-width="1.8"/>
+    <text x="675" y="65" font-size="24">⚖️</text>
+    <text x="710" y="57" font-size="15" font-weight="800" fill="#FBBF24">AWS ALB Ingress Controller</text>
+    <text x="710" y="75" font-size="12" font-weight="600" fill="#CBD5E1">Path: <tspan fill="#4ADE80" font-weight="700">/* ➔ FE</tspan> | <tspan fill="#38BDF8" font-weight="700">/api/* ➔ API</tspan></text>
+    <text x="710" y="93" font-size="12" font-weight="700" fill="#F59E0B" font-family="monospace">AWS Controller v2.7 (IAM IRSA)</text>
   </g>
 
-  <!-- RIGHT: AMAZON EKS v1.30 CLUSTER (GENEROUS 3-TIER GRID) -->
-  <g transform="translate(275, 115)">
+  <!-- Ingress Flow Down into EKS Frontend -->
+  <path d="M 802 220 L 802 232 L 157 232 L 157 295" fill="none" stroke="#F59E0B" stroke-width="2.5" marker-end="url(#arrowAmber)"/>
+  <rect x="420" y="222" width="170" height="20" rx="5" fill="#1C180C" stroke="#F59E0B" stroke-width="1"/>
+  <text x="505" y="236" font-size="11" font-weight="800" fill="#FBBF24" text-anchor="middle" font-family="monospace">HTTP:80 INGRESS ROUTING</text>
+
+
+  <!-- ======================================================== -->
+  <!-- 3. LAYER 2: PRODUCTION AMAZON EKS v1.30 CLUSTER           -->
+  <!-- ======================================================== -->
+  <g transform="translate(20, 245)">
     <!-- Outer Cluster Frame -->
-    <rect width="975" height="430" rx="12" fill="#0A101C" stroke="#2563EB" stroke-width="2" filter="url(#shadow)"/>
+    <rect width="960" height="495" rx="12" fill="#0A101C" stroke="#2563EB" stroke-width="2" filter="url(#shadow)"/>
     
     <!-- Top Cluster Banner -->
-    <rect x="15" y="14" width="945" height="34" rx="6" fill="#142136"/>
-    <text x="30" y="37" font-size="15" font-weight="800" fill="#60A5FA" letter-spacing="0.04em">☸️ AMAZON EKS v1.30 CLUSTER • AWS MULTI-AZ VPC (us-west-2a / us-west-2b)</text>
+    <rect x="14" y="12" width="932" height="34" rx="6" fill="#142136"/>
+    <text x="28" y="35" font-size="15" font-weight="800" fill="#60A5FA" letter-spacing="0.04em">☸️ AMAZON EKS v1.30 CLUSTER • AWS MULTI-AZ VPC (us-west-2a / us-west-2b)</text>
     
-    <rect x="830" y="19" width="120" height="24" rx="6" fill="#064E3B"/>
-    <text x="842" y="35" font-size="12" font-weight="800" fill="#34D399" font-family="monospace">KMS ENCRYPTED</text>
-
-    <!-- Connector: ALB to Frontend Tier -->
-    <path d="M -20 351 L 12 351 L 12 115 L 25 115" fill="none" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrowAmber)"/>
-    <text x="-2" y="240" font-size="11" font-weight="700" fill="#FBBF24" transform="rotate(-90 -2 240)" text-anchor="middle">HTTP:80 INGRESS</text>
+    <rect x="800" y="17" width="135" height="24" rx="6" fill="#064E3B"/>
+    <text x="815" y="33" font-size="12" font-weight="800" fill="#34D399" font-family="monospace">KMS ENCRYPTED</text>
 
     <!-- ========================================== -->
     <!-- TIER 1: FRONTEND SPA (NGINX ALPINE)        -->
     <!-- ========================================== -->
-    <g transform="translate(25, 62)">
-      <rect width="250" height="350" rx="10" fill="url(#feGrad)" stroke="#566D53" stroke-width="1.8"/>
+    <g transform="translate(18, 56)">
+      <rect width="275" height="425" rx="10" fill="url(#feGrad)" stroke="#566D53" stroke-width="1.8"/>
       
-      <rect x="12" y="12" width="226" height="30" rx="6" fill="#13241A"/>
+      <rect x="12" y="12" width="251" height="30" rx="6" fill="#13241A"/>
       <text x="22" y="33" font-size="14" font-weight="800" fill="#86EFAC">1. FRONTEND TIER (SPA)</text>
 
       <!-- Pod 1 -->
-      <rect x="12" y="52" width="226" height="82" rx="8" fill="#0B1610" stroke="#2D4D36" stroke-width="1.5"/>
-      <text x="24" y="82" font-size="20">⚛️</text>
-      <text x="54" y="78" font-size="15" font-weight="800" fill="#FFFFFF">frontend-pod-1</text>
-      <text x="54" y="98" font-size="13" font-weight="600" fill="#86EFAC">React 18 + Nginx 1.27 Alpine</text>
-      <text x="54" y="118" font-size="12" font-weight="700" fill="#38BDF8" font-family="monospace">Footprint: 25.2 MB (98% ↓)</text>
+      <rect x="12" y="52" width="251" height="92" rx="8" fill="#0B1610" stroke="#2D4D36" stroke-width="1.5"/>
+      <text x="24" y="85" font-size="22">⚛️</text>
+      <text x="56" y="80" font-size="16" font-weight="800" fill="#FFFFFF">frontend-pod-1</text>
+      <text x="56" y="100" font-size="13" font-weight="600" fill="#86EFAC">React 18 + Nginx 1.27 Alpine</text>
+      <text x="56" y="120" font-size="12" font-weight="700" fill="#38BDF8" font-family="monospace">Footprint: 25.2 MB (98% ↓)</text>
+      <text x="56" y="136" font-size="11" font-weight="700" fill="#22C55E">Non-Root User (UID 1000)</text>
 
       <!-- Pod 2 -->
-      <rect x="12" y="142" width="226" height="82" rx="8" fill="#0B1610" stroke="#2D4D36" stroke-width="1.5"/>
-      <text x="24" y="172" font-size="20">⚛️</text>
-      <text x="54" y="168" font-size="15" font-weight="800" fill="#FFFFFF">frontend-pod-2</text>
-      <text x="54" y="188" font-size="13" font-weight="600" fill="#86EFAC">Multi-AZ High Availability</text>
-      <text x="54" y="208" font-size="12" font-weight="700" fill="#22C55E">Non-Root User (UID 1000)</text>
+      <rect x="12" y="154" width="251" height="92" rx="8" fill="#0B1610" stroke="#2D4D36" stroke-width="1.5"/>
+      <text x="24" y="187" font-size="22">⚛️</text>
+      <text x="56" y="182" font-size="16" font-weight="800" fill="#FFFFFF">frontend-pod-2</text>
+      <text x="56" y="202" font-size="13" font-weight="600" fill="#86EFAC">Multi-AZ High Availability (2b)</text>
+      <text x="56" y="222" font-size="12" font-weight="700" fill="#34D399" font-family="monospace">Ready: 1/1 • Live Status: 200 OK</text>
+      <text x="56" y="238" font-size="11" font-weight="700" fill="#CBD5E1">Port: TCP 80 • Sandboxed</text>
 
       <!-- HPA & Specs Box -->
-      <rect x="12" y="234" width="226" height="102" rx="8" fill="#08120C" stroke="#22422C" stroke-width="1.2"/>
-      <text x="22" y="258" font-size="13" font-weight="800" fill="#4ADE80">⚙️ HPA v2 Autoscaling</text>
-      <text x="22" y="278" font-size="12" font-weight="600" fill="#CBD5E1">Min 2 / Max 8 Replicas (CPU 75%)</text>
-      <text x="22" y="298" font-size="12" font-weight="700" fill="#86EFAC" font-family="monospace">Service: frontend-svc:80</text>
-      <text x="22" y="318" font-size="12" font-weight="700" fill="#38BDF8">ClusterIP • Default Namespace</text>
+      <rect x="12" y="258" width="251" height="152" rx="8" fill="#08120C" stroke="#22422C" stroke-width="1.2"/>
+      <text x="24" y="284" font-size="14" font-weight="800" fill="#4ADE80">⚙️ HPA v2 Autoscaling</text>
+      <text x="24" y="306" font-size="13" font-weight="600" fill="#CBD5E1">Min 2 / Max 8 Replicas</text>
+      <text x="24" y="326" font-size="12" font-weight="600" fill="#94A3B8">Target CPU Threshold: 75%</text>
+      <text x="24" y="352" font-size="13" font-weight="700" fill="#86EFAC" font-family="monospace">Service: frontend-svc:80</text>
+      <text x="24" y="372" font-size="12" font-weight="600" fill="#CBD5E1">ClusterIP • Default Namespace</text>
+      <text x="24" y="394" font-size="12" font-weight="700" fill="#38BDF8">RollingUpdate: maxSurge 1</text>
     </g>
 
     <!-- ========================================== -->
     <!-- BARRIER 1: ZERO-TRUST NETWORKPOLICY        -->
     <!-- ========================================== -->
-    <g transform="translate(283, 115)">
-      <!-- Line leading into Barrier -->
-      <line x1="-8" y1="40" x2="68" y2="40" stroke="#38BDF8" stroke-width="3" marker-end="url(#arrowBlue)"/>
-      <line x1="-8" y1="130" x2="68" y2="130" stroke="#38BDF8" stroke-width="3" marker-end="url(#arrowBlue)"/>
+    <g transform="translate(300, 105)">
+      <!-- Flow lines passing through barrier -->
+      <line x1="-8" y1="45" x2="56" y2="45" stroke="#38BDF8" stroke-width="3" marker-end="url(#arrowBlue)"/>
+      <line x1="-8" y1="145" x2="56" y2="145" stroke="#38BDF8" stroke-width="3" marker-end="url(#arrowBlue)"/>
       
       <!-- Shield Box directly on flow -->
-      <rect x="2" y="20" width="58" height="210" rx="8" fill="#3B0715" stroke="#E11D48" stroke-width="2"/>
-      <text x="31" y="50" font-size="20" fill="#FDA4AF" text-anchor="middle">🔒</text>
-      <text x="31" y="74" font-size="11" font-weight="800" fill="#FDA4AF" text-anchor="middle">ZERO</text>
-      <text x="31" y="90" font-size="11" font-weight="800" fill="#FDA4AF" text-anchor="middle">TRUST</text>
-      <text x="31" y="114" font-size="10" font-weight="800" fill="#F43F5E" text-anchor="middle">POLICY</text>
-      <text x="31" y="140" font-size="11" font-weight="800" fill="#4ADE80" text-anchor="middle" font-family="monospace">TCP</text>
-      <text x="31" y="158" font-size="12" font-weight="800" fill="#4ADE80" text-anchor="middle" font-family="monospace">8080</text>
-      <text x="31" y="180" font-size="9" font-weight="700" fill="#CBD5E1" text-anchor="middle">INGRESS</text>
-      <text x="31" y="202" font-size="8" font-weight="800" fill="#FCA5A5" text-anchor="middle">DEFAULT</text>
-      <text x="31" y="216" font-size="8" font-weight="800" fill="#FCA5A5" text-anchor="middle">DENY</text>
+      <rect x="2" y="22" width="48" height="245" rx="8" fill="#3B0715" stroke="#E11D48" stroke-width="2"/>
+      <text x="26" y="52" font-size="20" fill="#FDA4AF" text-anchor="middle">🔒</text>
+      <text x="26" y="76" font-size="11" font-weight="800" fill="#FDA4AF" text-anchor="middle">ZERO</text>
+      <text x="26" y="92" font-size="11" font-weight="800" fill="#FDA4AF" text-anchor="middle">TRUST</text>
+      <text x="26" y="116" font-size="10" font-weight="800" fill="#F43F5E" text-anchor="middle">POLICY</text>
+      <text x="26" y="146" font-size="11" font-weight="800" fill="#4ADE80" text-anchor="middle" font-family="monospace">TCP</text>
+      <text x="26" y="166" font-size="13" font-weight="800" fill="#4ADE80" text-anchor="middle" font-family="monospace">8080</text>
+      <text x="26" y="190" font-size="9" font-weight="700" fill="#CBD5E1" text-anchor="middle">INGRESS</text>
+      <text x="26" y="214" font-size="8" font-weight="800" fill="#FCA5A5" text-anchor="middle">DEFAULT</text>
+      <text x="26" y="228" font-size="8" font-weight="800" fill="#FCA5A5" text-anchor="middle">DENY</text>
     </g>
 
     <!-- ========================================== -->
     <!-- TIER 2: BACKEND REST API (NODE 20 LTS)     -->
     <!-- ========================================== -->
-    <g transform="translate(350, 62)">
-      <rect width="265" height="350" rx="10" fill="url(#beGrad)" stroke="#346170" stroke-width="1.8"/>
+    <g transform="translate(356, 56)">
+      <rect width="280" height="425" rx="10" fill="url(#beGrad)" stroke="#346170" stroke-width="1.8"/>
       
-      <rect x="12" y="12" width="241" height="30" rx="6" fill="#10202B"/>
+      <rect x="12" y="12" width="256" height="30" rx="6" fill="#10202B"/>
       <text x="22" y="33" font-size="14" font-weight="800" fill="#38BDF8">2. BACKEND API TIER (REST)</text>
 
       <!-- Pod 1 -->
-      <rect x="12" y="52" width="241" height="82" rx="8" fill="#0A151E" stroke="#1F3D4D" stroke-width="1.5"/>
-      <text x="24" y="82" font-size="20">⚙️</text>
-      <text x="54" y="78" font-size="15" font-weight="800" fill="#FFFFFF">backend-pod-1</text>
-      <text x="54" y="98" font-size="13" font-weight="600" fill="#38BDF8">Node.js 20 LTS • Port 8080</text>
-      <text x="54" y="118" font-size="12" font-weight="700" fill="#10B981" font-family="monospace">USER node (UID 1000) • /readyz</text>
+      <rect x="12" y="52" width="256" height="92" rx="8" fill="#0A151E" stroke="#1F3D4D" stroke-width="1.5"/>
+      <text x="24" y="85" font-size="22">⚙️</text>
+      <text x="56" y="80" font-size="16" font-weight="800" fill="#FFFFFF">backend-pod-1</text>
+      <text x="56" y="100" font-size="13" font-weight="600" fill="#38BDF8">Node.js 20 LTS • REST API</text>
+      <text x="56" y="120" font-size="12" font-weight="700" fill="#10B981" font-family="monospace">Probes: /readyz &amp; /healthz OK</text>
+      <text x="56" y="136" font-size="11" font-weight="700" fill="#CBD5E1">Port: TCP 8080 • UID 1000</text>
 
       <!-- Pod 2 -->
-      <rect x="12" y="142" width="241" height="82" rx="8" fill="#0A151E" stroke="#1F3D4D" stroke-width="1.5"/>
-      <text x="24" y="172" font-size="20">⚙️</text>
-      <text x="54" y="168" font-size="15" font-weight="800" fill="#FFFFFF">backend-pod-2</text>
-      <text x="54" y="188" font-size="13" font-weight="600" fill="#38BDF8">Dual Replicas Multi-AZ</text>
-      <text x="54" y="208" font-size="12" font-weight="700" fill="#10B981" font-family="monospace">Health Checks: /healthz 200 OK</text>
+      <rect x="12" y="154" width="256" height="92" rx="8" fill="#0A151E" stroke="#1F3D4D" stroke-width="1.5"/>
+      <text x="24" y="187" font-size="22">⚙️</text>
+      <text x="56" y="182" font-size="16" font-weight="800" fill="#FFFFFF">backend-pod-2</text>
+      <text x="56" y="202" font-size="13" font-weight="600" fill="#38BDF8">Multi-AZ High Availability (2b)</text>
+      <text x="56" y="222" font-size="12" font-weight="700" fill="#FBBF24" font-family="monospace">AWS IAM IRSA (Least-Privilege)</text>
+      <text x="56" y="238" font-size="11" font-weight="700" fill="#CBD5E1">Port: TCP 8080 • Dual Active</text>
 
       <!-- HPA & PDB Spec Box -->
-      <rect x="12" y="234" width="241" height="102" rx="8" fill="#071118" stroke="#183442" stroke-width="1.2"/>
-      <text x="22" y="258" font-size="13" font-weight="800" fill="#38BDF8">🛡️ PDB + HPA v2 Resilience</text>
-      <text x="22" y="278" font-size="12" font-weight="600" fill="#CBD5E1">Min 2 / Max 10 Replicas (CPU 70%)</text>
-      <text x="22" y="298" font-size="12" font-weight="700" fill="#10B981">PodDisruptionBudget: minAvailable 1</text>
-      <text x="22" y="318" font-size="12" font-weight="700" fill="#FBBF24">Prometheus Exporter: <tspan font-family="monospace">/metrics</tspan></text>
+      <rect x="12" y="258" width="256" height="152" rx="8" fill="#071118" stroke="#183442" stroke-width="1.2"/>
+      <text x="24" y="284" font-size="14" font-weight="800" fill="#38BDF8">🛡️ PDB + HPA v2 Resilience</text>
+      <text x="24" y="306" font-size="13" font-weight="600" fill="#CBD5E1">Min 2 / Max 10 Replicas</text>
+      <text x="24" y="326" font-size="12" font-weight="700" fill="#10B981">PodDisruptionBudget: minAvail 1</text>
+      <text x="24" y="352" font-size="13" font-weight="700" fill="#38BDF8" font-family="monospace">Service: backend-svc:8080</text>
+      <text x="24" y="372" font-size="12" font-weight="700" fill="#FBBF24">Prometheus Exporter: /metrics</text>
+      <text x="24" y="394" font-size="12" font-weight="600" fill="#CBD5E1">CPU 70% | Memory 80% Scale</text>
     </g>
 
     <!-- ========================================== -->
     <!-- BARRIER 2: ZERO-TRUST NETWORKPOLICY        -->
     <!-- ========================================== -->
-    <g transform="translate(623, 115)">
-      <!-- Arrow Line leading into Barrier -->
-      <line x1="-8" y1="40" x2="68" y2="40" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrowAmber)"/>
-      <line x1="-8" y1="130" x2="68" y2="130" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrowAmber)"/>
+    <g transform="translate(644, 105)">
+      <!-- Flow lines passing through barrier -->
+      <line x1="-8" y1="45" x2="56" y2="45" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrowAmber)"/>
+      <line x1="-8" y1="145" x2="56" y2="145" stroke="#F59E0B" stroke-width="3" marker-end="url(#arrowAmber)"/>
       
       <!-- Shield Box directly on flow -->
-      <rect x="2" y="20" width="58" height="210" rx="8" fill="#3B0715" stroke="#E11D48" stroke-width="2"/>
-      <text x="31" y="50" font-size="20" fill="#FDA4AF" text-anchor="middle">🔒</text>
-      <text x="31" y="74" font-size="11" font-weight="800" fill="#FDA4AF" text-anchor="middle">ZERO</text>
-      <text x="31" y="90" font-size="11" font-weight="800" fill="#FDA4AF" text-anchor="middle">TRUST</text>
-      <text x="31" y="114" font-size="10" font-weight="800" fill="#F43F5E" text-anchor="middle">POLICY</text>
-      <text x="31" y="140" font-size="11" font-weight="800" fill="#4ADE80" text-anchor="middle" font-family="monospace">TCP</text>
-      <text x="31" y="158" font-size="12" font-weight="800" fill="#4ADE80" text-anchor="middle" font-family="monospace">27017</text>
-      <text x="31" y="180" font-size="9" font-weight="700" fill="#CBD5E1" text-anchor="middle">INGRESS</text>
-      <text x="31" y="202" font-size="8" font-weight="800" fill="#FCA5A5" text-anchor="middle">STRICT</text>
-      <text x="31" y="216" font-size="8" font-weight="800" fill="#FCA5A5" text-anchor="middle">ISOLATE</text>
+      <rect x="2" y="22" width="48" height="245" rx="8" fill="#3B0715" stroke="#E11D48" stroke-width="2"/>
+      <text x="26" y="52" font-size="20" fill="#FDA4AF" text-anchor="middle">🔒</text>
+      <text x="26" y="76" font-size="11" font-weight="800" fill="#FDA4AF" text-anchor="middle">ZERO</text>
+      <text x="26" y="92" font-size="11" font-weight="800" fill="#FDA4AF" text-anchor="middle">TRUST</text>
+      <text x="26" y="116" font-size="10" font-weight="800" fill="#F43F5E" text-anchor="middle">POLICY</text>
+      <text x="26" y="146" font-size="11" font-weight="800" fill="#4ADE80" text-anchor="middle" font-family="monospace">TCP</text>
+      <text x="26" y="166" font-size="12" font-weight="800" fill="#4ADE80" text-anchor="middle" font-family="monospace">27017</text>
+      <text x="26" y="190" font-size="9" font-weight="700" fill="#CBD5E1" text-anchor="middle">INGRESS</text>
+      <text x="26" y="214" font-size="8" font-weight="800" fill="#FCA5A5" text-anchor="middle">STRICT</text>
+      <text x="26" y="228" font-size="8" font-weight="800" fill="#FCA5A5" text-anchor="middle">ISOLATE</text>
     </g>
 
     <!-- ========================================== -->
     <!-- TIER 3: PERSISTENCE (MONGODB STATEFULSET) -->
     <!-- ========================================== -->
-    <g transform="translate(690, 62)">
-      <rect width="260" height="350" rx="10" fill="url(#dbGrad)" stroke="#8E7A63" stroke-width="1.8"/>
+    <g transform="translate(700, 56)">
+      <rect width="242" height="425" rx="10" fill="url(#dbGrad)" stroke="#8E7A63" stroke-width="1.8"/>
       
-      <rect x="12" y="12" width="236" height="30" rx="6" fill="#241810"/>
-      <text x="22" y="33" font-size="14" font-weight="800" fill="#FBBF24">3. PERSISTENCE TIER (STATEFUL)</text>
+      <rect x="12" y="12" width="218" height="30" rx="6" fill="#241810"/>
+      <text x="22" y="33" font-size="14" font-weight="800" fill="#FBBF24">3. PERSISTENCE (STATEFUL)</text>
 
       <!-- Mongo Pod -->
-      <rect x="12" y="52" width="236" height="88" rx="8" fill="#130D08" stroke="#4B3929" stroke-width="1.5"/>
+      <rect x="12" y="52" width="218" height="96" rx="8" fill="#130D08" stroke="#4B3929" stroke-width="1.5"/>
       <text x="24" y="86" font-size="22">🍃</text>
-      <text x="56" y="80" font-size="15" font-weight="800" fill="#FDE68A">mongodb-pod-0</text>
+      <text x="56" y="80" font-size="16" font-weight="800" fill="#FDE68A">mongodb-pod-0</text>
       <text x="56" y="100" font-size="13" font-weight="600" fill="#CBD5E1">MongoDB 7.0 StatefulSet</text>
-      <text x="56" y="118" font-size="12" font-weight="700" fill="#F59E0B">WiredTiger Engine • TCP 27017</text>
-      <text x="56" y="132" font-size="11" font-weight="700" fill="#10B981">Service: mongodb-service (Headless)</text>
+      <text x="56" y="120" font-size="12" font-weight="700" fill="#F59E0B">WiredTiger Engine • TCP 27017</text>
+      <text x="56" y="136" font-size="11" font-weight="700" fill="#10B981">Headless: mongodb-service</text>
 
       <!-- EBS gp3 Volume Box -->
-      <rect x="12" y="148" width="236" height="88" rx="8" fill="#130D08" stroke="#4B3929" stroke-width="1.5"/>
-      <text x="24" y="182" font-size="22">💾</text>
-      <text x="56" y="176" font-size="15" font-weight="800" fill="#FBBF24">AWS EBS gp3 Volume</text>
-      <text x="56" y="196" font-size="13" font-weight="600" fill="#CBD5E1">10Gi PersistentVolumeClaim</text>
-      <text x="56" y="214" font-size="12" font-weight="700" fill="#38BDF8">EBS CSI Driver (IAM IRSA)</text>
-      <text x="56" y="228" font-size="11" font-weight="700" fill="#10B981">AWS KMS Encryption (CMK)</text>
+      <rect x="12" y="158" width="218" height="96" rx="8" fill="#130D08" stroke="#4B3929" stroke-width="1.5"/>
+      <text x="24" y="192" font-size="22">💾</text>
+      <text x="56" y="186" font-size="15" font-weight="800" fill="#FBBF24">AWS EBS gp3 Volume</text>
+      <text x="56" y="206" font-size="13" font-weight="600" fill="#CBD5E1">10Gi PersistentVolumeClaim</text>
+      <text x="56" y="226" font-size="12" font-weight="700" fill="#38BDF8">EBS CSI Driver (IAM IRSA)</text>
+      <text x="56" y="242" font-size="11" font-weight="700" fill="#10B981">AWS KMS Encryption (CMK)</text>
 
       <!-- Security Isolation Box -->
-      <rect x="12" y="244" width="236" height="92" rx="8" fill="#1C0E0A" stroke="#B45309" stroke-width="1.2"/>
-      <text x="22" y="268" font-size="13" font-weight="800" fill="#F87171">✕ Public Internet: BLOCKED</text>
-      <text x="22" y="290" font-size="12" font-weight="800" fill="#4ADE80">✓ Backend Ingress Only (27017)</text>
-      <text x="22" y="312" font-size="12" font-weight="700" fill="#FBBF24">Stateful Persistence Guarantees</text>
-      <text x="22" y="328" font-size="11" font-weight="600" fill="#CBD5E1">Automated Failover &amp; Backup Ready</text>
+      <rect x="12" y="264" width="218" height="146" rx="8" fill="#1C0E0A" stroke="#B45309" stroke-width="1.2"/>
+      <text x="22" y="288" font-size="13" font-weight="800" fill="#F87171">✕ Public Internet: BLOCKED</text>
+      <text x="22" y="310" font-size="12" font-weight="800" fill="#4ADE80">✓ Backend Ingress Only (27017)</text>
+      <text x="22" y="334" font-size="12" font-weight="700" fill="#FBBF24">Stateful Persistence Quorum</text>
+      <text x="22" y="354" font-size="12" font-weight="600" fill="#CBD5E1">Auto Failover &amp; Backup Ready</text>
+      <text x="22" y="376" font-size="12" font-weight="700" fill="#34D399">Zero-Loss Storage Guarantees</text>
+      <text x="22" y="394" font-size="11" font-weight="600" fill="#94A3B8">Encrypted at Rest &amp; Transit</text>
     </g>
   </g>
 
 
   <!-- ======================================================== -->
-  <!-- 3. BOTTOM ROW: TWO WIDE, CLEAR, SPACIOUS PANELS          -->
+  <!-- 4. LAYER 3: PLATFORM ENGINEERING FOUNDATIONS              -->
   <!-- ======================================================== -->
 
   <!-- LEFT: 5-STAGE DEVSECOPS & ARGOCD GITOPS -->
-  <g transform="translate(30, 565)">
-    <rect width="595" height="335" rx="12" fill="url(#gitopsGrad)" stroke="#26344E" stroke-width="2" filter="url(#shadow)"/>
+  <g transform="translate(20, 755)">
+    <rect width="472" height="405" rx="12" fill="url(#gitopsGrad)" stroke="#26344E" stroke-width="2" filter="url(#shadow)"/>
     
-    <rect x="15" y="14" width="565" height="32" rx="6" fill="#182338"/>
-    <text x="28" y="36" font-size="15" font-weight="800" fill="#F43F5E" letter-spacing="0.04em">🛡️ 5-STAGE DEVSECOPS CI/CD &amp; ARGOCD GITOPS DELIVERY</text>
+    <rect x="14" y="14" width="444" height="32" rx="6" fill="#182338"/>
+    <text x="25" y="36" font-size="14" font-weight="800" fill="#F43F5E" letter-spacing="0.04em">🛡️ 5-STAGE DEVSECOPS CI/CD &amp; ARGOCD GITOPS</text>
 
-    <!-- 4 Pipeline Stage Cards -->
+    <!-- 4 Pipeline Stage Cards in 2x2 Grid (Generous Size!) -->
     <!-- Stage 1 -->
-    <rect x="15" y="58" width="130" height="110" rx="8" fill="#0D1624" stroke="#334155" stroke-width="1.5"/>
-    <text x="25" y="82" font-size="16">🐙</text>
-    <text x="46" y="81" font-size="13" font-weight="800" fill="#F1F5F9">Stage 1</text>
-    <text x="25" y="101" font-size="12" font-weight="700" fill="#38BDF8">Git Push / PR</text>
-    <text x="25" y="120" font-size="11" fill="#94A3B8">• Node 20 LTS</text>
-    <text x="25" y="137" font-size="11" fill="#94A3B8">• npm test suite</text>
-    <text x="25" y="155" font-size="11" font-weight="800" fill="#22C55E">✓ 0 Lint Errors</text>
-
-    <line x1="147" y1="113" x2="158" y2="113" stroke="#F43F5E" stroke-width="2" marker-end="url(#arrowAmber)"/>
+    <rect x="14" y="58" width="215" height="110" rx="8" fill="#0D1624" stroke="#334155" stroke-width="1.5"/>
+    <text x="24" y="82" font-size="18">🐙</text>
+    <text x="48" y="81" font-size="14" font-weight="800" fill="#F1F5F9">Stage 1: Git Push / PR</text>
+    <text x="24" y="103" font-size="12" font-weight="700" fill="#38BDF8">Automated GitHub Actions</text>
+    <text x="24" y="123" font-size="12" fill="#94A3B8">• Node 20 LTS Environment</text>
+    <text x="24" y="141" font-size="12" fill="#94A3B8">• npm test suite &amp; linting</text>
+    <text x="24" y="159" font-size="12" font-weight="800" fill="#22C55E">✓ 0 Lint Errors Guaranteed</text>
 
     <!-- Stage 2 -->
-    <rect x="160" y="58" width="130" height="110" rx="8" fill="#1B131E" stroke="#E11D48" stroke-width="1.8"/>
-    <text x="170" y="82" font-size="16">🛡️</text>
-    <text x="191" y="81" font-size="13" font-weight="800" fill="#FDA4AF">Stage 2</text>
-    <text x="170" y="101" font-size="12" font-weight="700" fill="#FDA4AF">Trivy SAST</text>
-    <text x="170" y="120" font-size="11" fill="#94A3B8">• Static Scan</text>
-    <text x="170" y="137" font-size="11" fill="#94A3B8">• Secrets Gate</text>
-    <text x="170" y="155" font-size="11" font-weight="800" fill="#4ADE80">0 CRITICAL</text>
-
-    <line x1="292" y1="113" x2="303" y2="113" stroke="#F43F5E" stroke-width="2" marker-end="url(#arrowAmber)"/>
+    <rect x="243" y="58" width="215" height="110" rx="8" fill="#1B131E" stroke="#E11D48" stroke-width="1.8"/>
+    <text x="253" y="82" font-size="18">🛡️</text>
+    <text x="277" y="81" font-size="14" font-weight="800" fill="#FDA4AF">Stage 2: Trivy SAST</text>
+    <text x="253" y="103" font-size="12" font-weight="700" fill="#FDA4AF">Vulnerability Detection Gate</text>
+    <text x="253" y="123" font-size="12" fill="#94A3B8">• Source code &amp; deps scan</text>
+    <text x="253" y="141" font-size="12" fill="#94A3B8">• Secrets &amp; token detector</text>
+    <text x="253" y="159" font-size="12" font-weight="800" fill="#4ADE80">0 CRITICAL / 0 HIGH CVEs</text>
 
     <!-- Stage 3 -->
-    <rect x="305" y="58" width="130" height="110" rx="8" fill="#0D1624" stroke="#334155" stroke-width="1.5"/>
-    <text x="315" y="82" font-size="16">☁️</text>
-    <text x="336" y="81" font-size="13" font-weight="800" fill="#F1F5F9">Stage 3</text>
-    <text x="315" y="101" font-size="12" font-weight="700" fill="#38BDF8">IaC Security</text>
-    <text x="315" y="120" font-size="11" fill="#94A3B8">• terraform fmt</text>
-    <text x="315" y="137" font-size="11" fill="#94A3B8">• Trivy IaC Gate</text>
-    <text x="315" y="155" font-size="11" font-weight="800" fill="#22C55E">✓ CIS Compliant</text>
-
-    <line x1="437" y1="113" x2="448" y2="113" stroke="#F43F5E" stroke-width="2" marker-end="url(#arrowAmber)"/>
+    <rect x="14" y="178" width="215" height="105" rx="8" fill="#0D1624" stroke="#334155" stroke-width="1.5"/>
+    <text x="24" y="202" font-size="18">☁️</text>
+    <text x="48" y="201" font-size="14" font-weight="800" fill="#F1F5F9">Stage 3: IaC Security</text>
+    <text x="24" y="223" font-size="12" font-weight="700" fill="#38BDF8">Terraform Verification</text>
+    <text x="24" y="243" font-size="12" fill="#94A3B8">• terraform fmt &amp; validate</text>
+    <text x="24" y="261" font-size="12" fill="#94A3B8">• Trivy IaC CIS benchmark</text>
+    <text x="24" y="277" font-size="12" font-weight="800" fill="#22C55E">✓ 100% Policy Compliant</text>
 
     <!-- Stage 4 -->
-    <rect x="450" y="58" width="130" height="110" rx="8" fill="#0D1624" stroke="#334155" stroke-width="1.5"/>
-    <text x="460" y="82" font-size="16">🐳</text>
-    <text x="481" y="81" font-size="13" font-weight="800" fill="#F1F5F9">Stage 4</text>
-    <text x="460" y="101" font-size="12" font-weight="700" fill="#38BDF8">Docker Build</text>
-    <text x="460" y="120" font-size="11" fill="#94A3B8">• Multi-Stage</text>
-    <text x="460" y="137" font-size="11" fill="#94A3B8">• 25MB Footprint</text>
-    <text x="460" y="155" font-size="11" font-weight="800" fill="#22C55E">Push to AWS ECR</text>
+    <rect x="243" y="178" width="215" height="105" rx="8" fill="#0D1624" stroke="#334155" stroke-width="1.5"/>
+    <text x="253" y="202" font-size="18">🐳</text>
+    <text x="277" y="201" font-size="14" font-weight="800" fill="#F1F5F9">Stage 4: Docker Build</text>
+    <text x="253" y="223" font-size="12" font-weight="700" fill="#38BDF8">Container Optimization</text>
+    <text x="253" y="243" font-size="12" fill="#94A3B8">• Buildx multi-stage build</text>
+    <text x="253" y="261" font-size="12" fill="#94A3B8">• 25.2MB Alpine footprint</text>
+    <text x="253" y="277" font-size="12" font-weight="800" fill="#22C55E">Pushes to AWS ECR</text>
 
     <!-- ArgoCD GitOps Box -->
-    <rect x="15" y="180" width="565" height="140" rx="8" fill="#0A1812" stroke="#10B981" stroke-width="1.8"/>
-    <text x="30" y="210" font-size="24">🐙</text>
-    <text x="65" y="208" font-size="16" font-weight="800" fill="#86EFAC">ArgoCD GitOps Continuous Delivery (Self-Healing)</text>
-    <text x="65" y="228" font-size="13" font-weight="600" fill="#CBD5E1">Pull-based in-cluster reconciliation tracking <tspan fill="#38BDF8" font-family="monospace">gitops/argocd-app.yaml</tspan></text>
+    <rect x="14" y="293" width="444" height="100" rx="8" fill="#0A1812" stroke="#10B981" stroke-width="1.8"/>
+    <text x="26" y="322" font-size="22">🐙</text>
+    <text x="56" y="320" font-size="15" font-weight="800" fill="#86EFAC">ArgoCD Declarative GitOps (Auto-Healing)</text>
+    <text x="56" y="340" font-size="12" font-weight="600" fill="#CBD5E1">In-cluster pull reconciliation tracking <tspan fill="#38BDF8" font-family="monospace">gitops/argocd-app.yaml</tspan></text>
 
     <!-- 3 Badges inside ArgoCD -->
-    <rect x="30" y="245" width="165" height="60" rx="6" fill="#08140F" stroke="#1F4D38" stroke-width="1"/>
-    <text x="40" y="267" font-size="12" font-weight="700" fill="#F0FDF4">Auto Drift Healing</text>
-    <text x="40" y="287" font-size="11" fill="#86EFAC">Auto-reverts manual edits</text>
+    <rect x="26" y="352" width="130" height="30" rx="5" fill="#08140F" stroke="#1F4D38" stroke-width="1"/>
+    <text x="91" y="372" font-size="11" font-weight="700" fill="#F0FDF4" text-anchor="middle">Auto Drift Healing</text>
 
-    <rect x="210" y="245" width="170" height="60" rx="6" fill="#08140F" stroke="#1F4D38" stroke-width="1"/>
-    <text x="220" y="267" font-size="12" font-weight="700" fill="#F0FDF4">Helm v3 Templating</text>
-    <text x="220" y="287" font-size="11" fill="#86EFAC">values-dev / values-prod</text>
+    <rect x="166" y="352" width="135" height="30" rx="5" fill="#08140F" stroke="#1F4D38" stroke-width="1"/>
+    <text x="233" y="372" font-size="11" font-weight="700" fill="#F0FDF4" text-anchor="middle">Helm v3 Templated</text>
 
-    <rect x="395" y="245" width="185" height="60" rx="6" fill="#08140F" stroke="#1F4D38" stroke-width="1"/>
-    <text x="405" y="267" font-size="12" font-weight="700" fill="#F0FDF4">Zero-Downtime Rollout</text>
-    <text x="405" y="287" font-size="11" font-weight="700" fill="#4ADE80">maxSurge: 1 | unavail: 0</text>
+    <rect x="311" y="352" width="145" height="30" rx="5" fill="#08140F" stroke="#1F4D38" stroke-width="1"/>
+    <text x="383" y="372" font-size="11" font-weight="800" fill="#4ADE80" text-anchor="middle">Zero-Downtime Rollout</text>
   </g>
 
   <!-- RIGHT: AWS FINOPS CLOUD GOVERNANCE & SRE OBSERVABILITY -->
-  <g transform="translate(655, 565)">
-    <rect width="595" height="335" rx="12" fill="url(#finopsGrad)" stroke="#26344E" stroke-width="2" filter="url(#shadow)"/>
+  <g transform="translate(508, 755)">
+    <rect width="472" height="405" rx="12" fill="url(#finopsGrad)" stroke="#26344E" stroke-width="2" filter="url(#shadow)"/>
     
-    <rect x="15" y="14" width="565" height="32" rx="6" fill="#15242C"/>
-    <text x="28" y="36" font-size="15" font-weight="800" fill="#FBBF24" letter-spacing="0.04em">💰 AWS FINOPS CLOUD GOVERNANCE &amp; SRE OBSERVABILITY</text>
+    <rect x="14" y="14" width="444" height="32" rx="6" fill="#15242C"/>
+    <text x="25" y="36" font-size="14" font-weight="800" fill="#FBBF24" letter-spacing="0.04em">💰 AWS FINOPS CLOUD GOVERNANCE &amp; SRE OBSERVABILITY</text>
 
     <!-- FinOps Card 1: Spot Nodes -->
-    <rect x="15" y="58" width="275" height="120" rx="8" fill="#0D1A14" stroke="#234E35" stroke-width="1.5"/>
-    <text x="28" y="86" font-size="20">🏷️</text>
-    <text x="56" y="84" font-size="15" font-weight="800" fill="#FFFFFF">Hybrid Spot Node Groups</text>
-    <text x="28" y="106" font-size="12" font-weight="600" fill="#94A3B8">t3.medium / t3a.medium / t4g.medium</text>
-    <text x="28" y="124" font-size="12" fill="#CBD5E1">On-Demand: $122.64/mo ➔ <tspan fill="#34D399" font-weight="700">Spot: $36.08/mo</tspan></text>
-    <rect x="28" y="136" width="245" height="30" rx="6" fill="#064E3B"/>
-    <text x="40" y="156" font-size="12" font-weight="800" fill="#34D399">✓ 70.6% NET SAVINGS ($86.56/mo)</text>
+    <rect x="14" y="58" width="444" height="105" rx="8" fill="#0D1A14" stroke="#234E35" stroke-width="1.5"/>
+    <text x="26" y="86" font-size="22">🏷️</text>
+    <text x="56" y="84" font-size="15" font-weight="800" fill="#FFFFFF">Hybrid Spot Node Groups (FinOps Diversification)</text>
+    <text x="26" y="106" font-size="13" font-weight="600" fill="#94A3B8">t3.medium / t3a.medium / t4g.medium Diversification</text>
+    <text x="26" y="126" font-size="13" fill="#CBD5E1">AWS On-Demand: $122.64/mo ➔ <tspan fill="#34D399" font-weight="700">KubePulse Spot: $36.08/mo</tspan></text>
+    <rect x="26" y="136" width="420" height="22" rx="5" fill="#064E3B"/>
+    <text x="236" y="152" font-size="12" font-weight="800" fill="#34D399" text-anchor="middle">✓ 70.6% NET COMPUTE SAVINGS ($86.56/mo SAVED)</text>
 
     <!-- FinOps Card 2: Shared NAT -->
-    <rect x="305" y="58" width="275" height="120" rx="8" fill="#0D1A14" stroke="#234E35" stroke-width="1.5"/>
-    <text x="318" y="86" font-size="20">🌐</text>
-    <text x="346" y="84" font-size="15" font-weight="800" fill="#FFFFFF">Shared NAT Consolidation</text>
-    <text x="318" y="106" font-size="12" font-weight="600" fill="#94A3B8">Single Gateway Policy for Non-Prod</text>
-    <text x="318" y="124" font-size="12" fill="#CBD5E1">Multi-AZ: $64.80/mo ➔ <tspan fill="#34D399" font-weight="700">Shared: $32.40/mo</tspan></text>
-    <rect x="318" y="136" width="245" height="30" rx="6" fill="#064E3B"/>
-    <text x="346" y="156" font-size="12" font-weight="800" fill="#34D399">✓ SAVES $388.80 ANNUALLY</text>
+    <rect x="14" y="171" width="444" height="95" rx="8" fill="#0D1A14" stroke="#234E35" stroke-width="1.5"/>
+    <text x="26" y="198" font-size="22">🌐</text>
+    <text x="56" y="196" font-size="15" font-weight="800" fill="#FFFFFF">Shared NAT Gateway Consolidation</text>
+    <text x="26" y="218" font-size="13" font-weight="600" fill="#94A3B8">Single Gateway Policy for Non-Prod Environments</text>
+    <text x="26" y="238" font-size="13" fill="#CBD5E1">Multi-AZ NAT: $64.80/mo ➔ <tspan fill="#34D399" font-weight="700">Shared: $32.40/mo (SAVES $388.80/YR)</tspan></text>
+    <rect x="26" y="244" width="420" height="20" rx="5" fill="#064E3B"/>
+    <text x="236" y="258" font-size="11" font-weight="800" fill="#34D399" text-anchor="middle">✓ PDB REBALANCE DRAIN: 100% ZERO-DOWNTIME SPOT TOLERANCE</text>
 
     <!-- Observability Box -->
-    <rect x="15" y="190" width="565" height="130" rx="8" fill="#0C1522" stroke="#0284C7" stroke-width="1.8"/>
-    <text x="30" y="218" font-size="22">📊</text>
-    <text x="62" y="217" font-size="16" font-weight="800" fill="#38BDF8">Prometheus Golden Signals &amp; SRE Observability</text>
+    <rect x="14" y="274" width="444" height="119" rx="8" fill="#0C1522" stroke="#0284C7" stroke-width="1.8"/>
+    <text x="26" y="302" font-size="22">📊</text>
+    <text x="56" y="300" font-size="15" font-weight="800" fill="#38BDF8">Prometheus Golden Signals &amp; SRE Observability</text>
 
     <!-- 3 Observability Badges -->
-    <rect x="30" y="234" width="165" height="72" rx="6" fill="#070E18" stroke="#153B57" stroke-width="1"/>
-    <text x="40" y="255" font-size="12" font-weight="700" fill="#93C5FD">Metrics Exporter</text>
-    <text x="40" y="272" font-size="11" fill="#CBD5E1" font-family="monospace">http_requests_total</text>
-    <text x="40" y="290" font-size="11" font-weight="700" fill="#4ADE80">Scraped @ 15s via CRD</text>
+    <rect x="26" y="316" width="135" height="66" rx="6" fill="#070E18" stroke="#153B57" stroke-width="1"/>
+    <text x="36" y="336" font-size="12" font-weight="700" fill="#93C5FD">Metrics Exporter</text>
+    <text x="36" y="353" font-size="11" fill="#CBD5E1" font-family="monospace">http_requests_total</text>
+    <text x="36" y="371" font-size="11" font-weight="700" fill="#4ADE80">Scraped @ 15s via CRD</text>
 
-    <rect x="210" y="234" width="170" height="72" rx="6" fill="#070E18" stroke="#153B57" stroke-width="1"/>
-    <text x="220" y="255" font-size="12" font-weight="700" fill="#F87171">Alertmanager SLOs</text>
-    <text x="220" y="272" font-size="11" fill="#CBD5E1">HighErrorRate (&gt;5%)</text>
-    <text x="220" y="290" font-size="11" font-weight="700" fill="#FCA5A5">DBDisconnected Alert (p0)</text>
+    <rect x="169" y="316" width="138" height="66" rx="6" fill="#070E18" stroke="#153B57" stroke-width="1"/>
+    <text x="179" y="336" font-size="12" font-weight="700" fill="#F87171">Alertmanager SLOs</text>
+    <text x="179" y="353" font-size="11" fill="#CBD5E1">HighErrorRate (&gt;5%)</text>
+    <text x="179" y="371" font-size="11" font-weight="700" fill="#FCA5A5">DBDisconnected (p0)</text>
 
-    <rect x="395" y="234" width="175" height="72" rx="6" fill="#070E18" stroke="#153B57" stroke-width="1"/>
-    <text x="405" y="255" font-size="12" font-weight="700" fill="#FBBF24">Chaos Burst Engine</text>
-    <text x="405" y="272" font-size="11" fill="#CBD5E1">Fires 12 concurrent bursts</text>
-    <text x="405" y="290" font-size="11" font-weight="700" fill="#34D399">100% Zero-Loss Quorum</text>
+    <rect x="315" y="316" width="133" height="66" rx="6" fill="#070E18" stroke="#153B57" stroke-width="1"/>
+    <text x="325" y="336" font-size="12" font-weight="700" fill="#FBBF24">Chaos Burst Engine</text>
+    <text x="325" y="353" font-size="11" fill="#CBD5E1">12 concurrent bursts</text>
+    <text x="325" y="371" font-size="11" font-weight="700" fill="#34D399">100% Zero-Loss</text>
   </g>
 
 </svg>
